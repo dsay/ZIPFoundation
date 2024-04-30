@@ -5,7 +5,7 @@ import PackageDescription
 let targets: [Target] = [
     .target(name: "ZIPFoundation",
             resources: [
-                .copy("Resources/PrivacyInfo.xcprivacy")
+                .process("Resources/PrivacyInfo.xcprivacy")
             ]),
     .testTarget(name: "ZIPFoundationTests", dependencies: ["ZIPFoundation"])
 ]
