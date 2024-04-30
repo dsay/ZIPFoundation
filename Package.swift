@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.6
 import PackageDescription
 
 #if canImport(Compression)
@@ -20,7 +20,9 @@ let package = Package(
         .macOS(.v10_11), .iOS(.v9), .tvOS(.v9), .watchOS(.v2)
     ],
     products: [
-        .library(name: "ZIPFoundation", targets: ["ZIPFoundation"])
+        .library(name: "ZIPFoundation", targets: ["ZIPFoundation"],             resources: [
+            .copy("Resources/PrivacyInfo.xcprivacy")
+        ]),
     ],
     targets: targets,
     swiftLanguageVersions: [.v4, .v4_2, .v5]
